@@ -1,0 +1,145 @@
+@import '../SassFiles/variable';
+@import '../SassFiles/config';
+@import '../SassFiles/mixin';
+
+div.container {
+    width: 75%;
+    height: 100%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-around;
+    color: $main__black__color;
+    box-shadow: 0px 0px 2px #ddd;
+    padding: 45px 0;
+    div.parimal__image {
+        width: 500px;
+        img {
+            width: 100%;
+        }
+        @include rwd(1246) {
+            width: 450px;
+        }
+        @include rwd(1054) {
+            width: 400px;
+        }
+        @include sm {
+            width: 350px;
+        }
+        @include rwd(384) {
+          width: 300px;
+        }
+        @include rwd(326) {
+          width: 250px;
+        }
+         
+    }
+    div.seperation {
+      border: none;
+      background-color: #ddd;
+      width: 1px;
+      height: 540px;
+      @include rwd(1246) {
+          height: 500px;
+      }
+      @include rwd(1052) {
+          display: none;
+      }
+    }
+    div.parimal__info {
+         padding: 115px;
+         
+         border-radius: 15px;
+        &__padding_left {
+            padding-left: 35px;
+        }
+        animation-name: stretch;
+        animation-iteration-count: infinite;
+        animation-duration: 2.0s;
+        animation-timing-function: ease;
+        animation-direction: alternate;
+        
+        div.download__portfolio {
+            margin-top: 45px;
+            
+            a {
+                font-family: 'josef';
+                outline: none;
+                border: none;
+                padding: 12px;
+                box-shadow: 8px 8px 10px #ddd;
+                transition: .4s;
+                cursor: pointer;
+                &:hover {
+                    box-shadow: 2px 2px 5px #ddd;
+                }
+            }
+        }
+        @include rwd(1246) {
+            padding: 55px;
+        }
+        h2 {
+            @include rwd(954) {
+                font-size: 1.5em;
+            }
+            @include sm {
+                font-size: 1em;
+            }
+            @include rwd(384) {
+                font-size: 0.9em;
+            }
+            @include rwd(326) {
+                font-size: 0.7em;
+            }
+        }
+        h1{
+            @include rwd(954) {
+                font-size: 2em;
+            }
+            @include sm {
+                font-size: 1.3em;
+            }
+            @include rwd(384) {
+                font-size: 1.2em;
+            }
+            @include rwd(326) {
+                font-size: 1em;
+            }
+        }
+        @include rwd(891) {
+            margin-top: 45px;
+        }
+        @include sm {
+          width: 350px;
+          padding:40px;
+        }
+        @include rwd(384) {
+            padding: 30px;
+            width: 300px;
+        }
+         @include rwd(326) {
+           width: 250px;
+           padding: 15px;
+         }
+        
+    }
+    @include rwd(1600) {
+        width: 95%;
+    }
+    @include rwd(891) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+    }
+    
+}
+
+
+@keyframes stretch {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.08);
+  }
+}

@@ -1,0 +1,30 @@
+<header>
+    <nav  >
+        <div class="logo">
+            <h2 routerLink="/" >MParimal</h2>
+        </div>
+        <ul class="desktop__view">
+            <li><a [routerLinkActiveOptions]="{exact:true}" routerLinkActive="offwhite" routerLink="/" >Home</a></li>
+            <li><a routerLinkActive="offwhite" routerLink="about" >About</a></li>
+            <li><a routerLinkActive="offwhite" routerLink="projects" >Projects</a></li>
+            <li><a routerLinkActive="offwhite" routerLink="skills" >Skills</a></li>
+            <li><a href="https://certificates-c0778.web.app/" target="_blank">Certificates</a></li>
+            <li><a routerLinkActive="offwhite" routerLink="contact" >Contact</a></li>
+        </ul>
+        <ul class="mobile__view" [ngClass]="open">
+            <li><a [routerLinkActiveOptions]="{exact:true}" routerLinkActive="offwhite" routerLink="" >Home</a></li>
+            <li><a routerLinkActive="offwhite" routerLink="about" >About</a></li>
+            <li><a routerLinkActive="offwhite" routerLink="projects" >Projects</a></li>
+            <li><a routerLinkActive="offwhite" routerLink="skills" >Skills</a></li>
+            <li><a href="https://certificates-c0778.web.app/" target="_blank">Certificates</a></li>
+            <li><a routerLinkActive="offwhite" routerLink="contact" >Contact</a></li>
+        </ul>
+        <div class="bars" [ngClass]="toggle" (click)="barsCalled()">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+    </nav>
+</header>
+<hr>
+<br> <br>

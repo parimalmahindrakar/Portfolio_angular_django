@@ -1,0 +1,145 @@
+@import '../SassFiles/variable';
+@import '../SassFiles/config';
+@import '../SassFiles/mixin';
+
+div.about__container {
+    height: 100%;
+    width: 100%;    
+    display: flex;
+
+    div.container {
+        width: 55%;
+        margin: 100px auto;
+        padding: 50px;
+        box-shadow: 0px 0px 2px #ccc;
+        h5.paras__headings {
+            color: $main__black__color;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ddd;
+            width: 325px;
+            margin-top: 25px;
+            font-size: 20px;
+            @include sm {
+                width: 225px;
+                font-size: 1.1em;
+            }
+            @include rwd(319) {
+                width: 180px;
+                 font-size: .9em;
+            }
+        }
+        span.h1 {
+            font-size: 1.4em;
+        }
+
+        span.offwhite {
+            color: #777;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 25px;
+            color: $main__black__color;
+
+            @include sm {
+                line-height: 20px;
+                font-size: .9em;
+            }
+            @include rwd(319) {
+                font-size: .7em;
+            }
+
+            a {
+                color: dodgerblue;
+                img {
+                    width: 22px;
+                }
+            }
+        }
+
+        .portfolio__button {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+
+            a {
+                padding: 10px;
+                cursor: pointer;
+                outline: none;
+                border: none;
+                background-color: transparent;
+                box-shadow: 3px 3px 8px #aaa;
+                font-family: "josef";
+                transition: 0.4s;
+
+                &:focus {
+                    border: none;
+                    outline: none;
+                }
+
+                &:hover {
+                    box-shadow: 0px 0px 5px #aaa;
+                }
+                @include sm {
+                  font-size: .9em;
+                }
+
+                @include rwd(319) {
+                  font-size: .7em;
+                }
+            }
+        }
+
+        @include rwd(1117) {
+        width: 65%;
+        }
+
+        @include lg {
+        width: 75%;
+        }
+
+        @include md {
+        width: 80%;
+        }
+
+        @include sm {
+        width: 95%;
+        padding: 25px;
+        margin-top: 50px;
+        }
+        div.my__links {
+            width: 50%;
+            margin: 20px auto 10px;
+            display: flex;
+            justify-content: space-evenly;
+            animation-name: stretch;
+            animation-iteration-count: infinite;
+            animation-duration: 2.0s;
+            animation-timing-function: ease;
+            animation-direction: alternate;
+            a {
+                img {
+                    width: 35px;
+                    @include sm {
+                        width: 25px;
+                    }
+                }
+            }
+            @include md {
+                width: 70%;
+            }
+
+        }
+    }
+}
+
+
+@keyframes stretch {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.08);
+  }
+}

@@ -1,0 +1,124 @@
+@import '../SassFiles/variable';
+@import '../SassFiles/config';
+@import '../SassFiles/mixin';
+
+header {
+    height: 60px;
+    padding-top: 20px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background-color: #f2f2f2;
+    nav {
+        
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      ul.desktop__view {
+        display: flex;
+        width: 455px;
+        justify-content: space-evenly;
+        @include sm {
+          display: none;
+        }
+      }
+      ul.mobile__view {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 0;
+          height: 200px;
+          width: 125px;
+          padding-left: 25px;
+          border-radius: 0px 0px 20px 0;
+          justify-content: space-evenly;
+          background-color: $main__black__color;
+          transition: .5s;
+          li {
+              a { 
+                  color: #fff;
+                  &:hover {
+                      color: #aaa;
+                  }
+                  &:focus {
+                      outline: none;
+                  }
+              }
+          }
+          transform: translate(-100%,-100%);
+          &.open {
+              transform: translate(0%, 0%);
+          }
+          @include up__sm {
+              display: none;
+          }
+
+      }
+      @include md {
+          justify-content: space-between;
+      }
+
+      div.logo {
+        @include md {
+            margin-left: 15px;
+        }
+        color: $main__black__color;
+        cursor: pointer;
+        h2 {
+            &:focus {
+              outline: none;
+              border: none;
+            }
+        }
+      }
+      div.bars {
+          height: 22px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          margin-right: 15px;
+          cursor: pointer;
+          div.line {
+              width: 20px;
+              height: 2px;
+              background-color: $main__black__color;
+              transition: 0.5s;
+          }
+          @include up__sm {
+              display: none;
+          }
+      }
+      
+    }
+}
+
+
+hr {
+    width: 90%;
+    margin:  auto;
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    @include md {
+        width: 98%;
+    }
+}
+
+.toggle {
+    .line1 {
+      transform: rotate(-405deg) translate(-4px, 5px);
+    }
+    .line2 {
+      opacity: 0;
+    }
+    .line3 {
+      transform: rotate(405deg) translate(-4px, -5px);
+    }
+}
+
+.offwhite {
+    color: #aaa;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #aaa;
+}

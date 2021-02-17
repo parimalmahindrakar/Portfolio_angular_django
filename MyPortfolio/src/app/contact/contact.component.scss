@@ -1,0 +1,177 @@
+@import '../SassFiles/variable';
+@import '../SassFiles/config';
+@import '../SassFiles/mixin';
+
+div.container {
+  display: grid;
+  padding: 0 0 100px;
+  width: 75%;
+
+  @include rwd(1550) {
+    width: 80%;
+  }
+
+  @include xl {
+    width: 90%;
+  }
+
+  margin: 150px auto 0;
+
+  @include rwd(870) {
+    margin: 80px auto 0;
+  }
+
+  grid-template-columns: 1fr 1fr;
+
+  @include rwd(870) {
+    grid-template-columns: 1fr;
+  }
+
+  div.parimal__img {
+    width: 495px;
+    justify-self: start;
+
+    @include rwd(870) {
+      justify-self: center;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include rwd(1089) {
+      width: 400px;
+    }
+
+    @include rwd(910) {
+      width: 350px;
+    }
+
+    @include sm {
+      width: 300px;
+    }
+
+    @include rwd(336) {
+      width: 250px;
+    }
+  }
+
+  div.contact__form {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 2px #bbb;
+
+    @include rwd(870) {
+      box-shadow: none;
+    }
+
+    @include rwd(1089) {
+      padding-top: 30px;
+    }
+
+    form {
+      width: 70%;
+
+      @include sm {
+        width: 300px;
+      }
+
+      @include rwd(336) {
+        width: 250px;
+      }
+
+      display: flex;
+      flex-direction: column;
+      font-family: "josef";
+      margin: auto;
+
+      input[type="email"],
+      textarea {
+        margin-bottom: 30px;
+        padding: 12px;
+        border: none;
+        outline: none;
+        font-family: "josef";
+        font-size: 18px;
+        color: $main__black__color;
+        box-shadow: 0px 0px 2px #aaa;
+        border-radius: 10px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      ::-webkit-input-placeholder {
+        /* Edge */
+        color: #bbb;
+        font-size: 16px;
+      }
+
+      textarea {
+        height: 150px;
+        resize: none;
+      }
+
+      button {
+        padding: 15px 2px;
+        font-family: "josef";
+        font-size: 1em;
+        background-color: transparent;
+        box-shadow: 2px 2px 8px #ccc;
+        color: $main__black__color;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: .4s;
+
+        &:hover {
+          box-shadow: 0px 0px 5px #ccc;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    div.my__links {
+      width: 50%;
+      margin: 50px auto 10px;
+      display: flex;
+      justify-content: space-evenly;
+      animation-name: stretch;
+      animation-iteration-count: infinite;
+      animation-duration: 2.0s;
+      animation-timing-function: ease;
+      animation-direction: alternate;
+
+      a {
+        img {
+          width: 35px;
+
+          @include sm {
+            width: 25px;
+          }
+        }
+      }
+
+      @include md {
+        width: 70%;
+      }
+
+    }
+  }
+
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.08);
+  }
+}

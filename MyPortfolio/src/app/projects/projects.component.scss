@@ -1,0 +1,57 @@
+@import '../SassFiles/variable';
+@import '../SassFiles/config';
+@import '../SassFiles/mixin';
+
+div.container {
+  width: 55%;
+  margin: 90px auto;
+
+  @include lg {
+    width: 75%;
+  }
+
+  @include rwd(317) {
+    width: 90%;
+  }
+
+  div.project {
+    margin-bottom: 60px;
+    color: $main__black__color;
+    padding: 25px;
+    box-shadow: 0px 0px 2px #aaa;
+    .no__border {
+        border-bottom: none;
+    }
+    span {
+      font-size: 1.6em;
+      padding-bottom: 10px;
+      border-bottom: 1px #ddd solid;
+      font-weight: 550;
+
+      @include sm {
+        font-size: 1.2em;
+      }
+      @include md {
+          font-size: 1em;
+      }
+
+      @include rwd(476) {
+        border-bottom: none;
+      }
+    }
+
+    p {
+      text-align: justify;
+      line-height: 22px;
+
+      a {
+        color: dodgerblue;
+      }
+
+      @include sm {
+        font-size: .9em;
+        line-height: 19px;
+      }
+    }
+  }
+}

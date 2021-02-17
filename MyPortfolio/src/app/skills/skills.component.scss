@@ -1,0 +1,55 @@
+@import '../SassFiles/variable';
+@import '../SassFiles/config';
+@import '../SassFiles/mixin';
+
+div.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+  width: 75%;
+  margin: 80px auto;
+  grid-gap: 45px;
+
+  @include rwd(512) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  img {
+    width: 125px;
+    justify-self: center;
+    transition: 0.5s;
+    @include xl {
+      width: 110px;
+    }
+
+    @include lg {
+      width: 90px;
+    }
+
+    @include md {
+      width: 75px;
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
+
+  div.img__n__info {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+
+    span {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #ddd;
+
+      @include lg {
+        font-size: 13px;
+      }
+    }
+  }
+
+}

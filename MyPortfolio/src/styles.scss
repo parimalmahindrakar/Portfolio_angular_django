@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import './app/SassFiles/variable';
+@import './app/SassFiles/config';
+@import './app/SassFiles/mixin';
+
+
+@font-face {
+  font-family: 'josef';
+  src: local('josef'), url('./fonts/josef.ttf') format('opentype');
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'josef';
+  background-image: linear-gradient( #fff 0%, #ebedee 100%);
+}

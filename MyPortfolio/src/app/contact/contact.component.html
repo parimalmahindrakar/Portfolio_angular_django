@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="parimal__img">
+        <img src="../../assets/ParimalMahindrakar/pm2.jpg">
+    </div>
+    <div class="contact__form">
+        <form (ngSubmit)="onFormSubmit(form)" #form="ngForm">
+            <input email ngModel required name="email" type="email" placeholder="Enter the valid email id.">
+            <textarea ngModel required name="review" placeholder="Enter the Query/Feedback"></textarea>
+            <p *ngIf="errMsg" style="color: red;"> &bull; {{errMsg}}</p> <br>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="my__links">
+            <a target="_blank" href="https://github.com/parimalmahindrakar">
+                <img src="../../assets/icons/github.png">
+            </a>
+            <a target="_blank" href="mailto:parimalm4653@gmail.com">
+                <img src="../../assets/icons/gmail.png">
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/parimal-mahindrakar-189226190/">
+                <img src="../../assets/icons/linkedin.png">
+            </a>
+        </div>
+    </div>
+</div>
