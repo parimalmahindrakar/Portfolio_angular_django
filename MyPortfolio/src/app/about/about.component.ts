@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+
+  portfolio: string = ""
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit(): void {
+    this.portfolio = this.sharedService.myPortfolioLink
   }
 
 }
