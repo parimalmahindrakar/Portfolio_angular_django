@@ -18,6 +18,7 @@ div.container {
     width: 125px;
     justify-self: center;
     transition: 0.5s;
+
     @include xl {
       width: 110px;
     }
@@ -29,9 +30,11 @@ div.container {
     @include md {
       width: 75px;
     }
+
     &:hover {
-        transform: scale(1.1);
+      transform: scale(1.1);
     }
+    
   }
 
   div.img__n__info {
@@ -50,6 +53,39 @@ div.container {
         font-size: 13px;
       }
     }
+    &.move {
+      position: relative;
+      animation-name: example;
+      animation-duration: 4s;
+    }
   }
 
+}
+
+@keyframes example {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+
+    left:100%;
+    top: 0px;
+  }
+
+  50% {
+    left: 100%;
+    top: 100%;
+  }
+
+  75% {
+    left: 0px;
+    top: 100%;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
 }
